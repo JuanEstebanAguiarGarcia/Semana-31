@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Actividad semana 31</title>
+	<meta charset="utf-8">
+	<style>
+		body{
+			background: #81F7D8;
+		}
+		.titu{
+			position: absolute;
+			top: 50px;
+			left: 750px;
+			width: 500px;
+			height: 70px;
+			border-radius: 10%;
+			font-size: 40px;
+			font-family: elephant;
+			background:#A9BCF5;
+			text-align: center;
+        text-orientation: center;
+        align-content:center;
+
+		}
+		.foto{
+			background-image: url("neo.png");
+			position: absolute;
+			top: 200px;
+			width: 900px;
+			height: 500px;
+			left: 700px;
+			border-radius: 15%;
+			background-size: cover;
+			display: none;
+			z-index: 5;
+
+		}
+			.inf2{
+				position: absolute;	
+		width: 0px;
+		height: 600px;
+		background:#F3F781;
+		top: 150px;
+		border-radius: 10%;
+		left: 650px;
+		transition: all 2s;
+		}
+		.b1{
+			position: absolute;
+			top: 250px;
+			left: 50px;
+			width: 500px;
+			height: 100px;
+			background: #F78181;
+			font-family: forte;
+			font-size: 40px;
+			text-align: center;
+        text-orientation: center;
+        align-content:center;
+		}
+		.c1{
+			position: absolute;
+			top: 155px;
+			width: 1000px;
+			height:0px;
+			background: #81F781;
+			border-radius: 10%;
+        font-family: Tahoma;
+        left: 650px;
+        display: none;
+        transition: all 2s;
+        	text-align: center;
+        text-orientation: center;
+        align-content:center;
+        font-size: 40px;
+		}
+		
+		.te{
+			position: absolute;
+			top: 400px;
+			z-index: 10;
+			
+        font-family: Tahoma;
+        left: 950px;
+        display: none;
+        transition: all 2s;
+        	text-align: center;
+        text-orientation: center;
+        align-content:center;
+        font-size: 40px;
+		}
+		.b2{
+			position: absolute;
+			top: 500px;
+			left: 50px;
+			width: 500px;
+			height: 100px;
+			background: #F78181;
+			font-family: forte;
+			font-size: 40px;
+			text-align: center;
+        text-orientation: center;
+        align-content:center;
+		}
+		.c2{
+	position: absolute;
+			top: 155px;
+			width: 0px;
+			height:600px;
+			background: #F5D0A9;
+			border-radius: 10%;
+        font-family: Tahoma;
+        left: 650px;
+        display: none;
+        transition: all 2s;
+        	text-align: center;
+        text-orientation: center;
+        align-content:center;
+        font-size: 40px;			
+		}
+		.le{
+			position: absolute;
+			top: 170px;
+			border-radius: 5%;
+			display: none;
+			left: 675px;
+		color:white;
+		transition: all 2s 0.5s;
+		z-index: 15;
+		font-size: 36px;
+		   font-family: Tahoma;
+
+
+		}
+	</style>
+</head>
+<body>
+	<div class="foto" id="fot"></div>
+	<div class="inf2" id="info3"></div>
+		<div class="titu" id="ti" onclick="tt()">C.E Neosistemas</div>
+
+		<div class="b1" onclick="bt1()">Boton 1</div>
+		<div class="c1" id="cu1"></div>
+		<div class="te" id="tex"></div>
+
+		<div class="b2" onclick="bt2()">Comentario</div>
+		<div class="c2" id="cu2"></div>
+		<div class="le" id="lt"><h1>Comentario...</h1>Me parecio una actividad muy buena, y aunque algunos<br> detalles exactos no los pude hacer, me gusto mucho como<br> me quedo graficamente y espero seguir mejorando en<br> JavaScript porque la verdad me esta gustando todo lo que<br> se puede hacer con este. </div>
+</div>
+
+
+		
+		<script>
+			x=0
+			function tt(){
+			fot.style.display="block";
+			info3.style.width=1000+"px";
+			hi=setTimeout(tt,1000)
+			x=x+1;
+			if(x==10){
+				clearInterval(hi);
+				fot.style.display="none";
+					info3.style.width=0+"px";
+			}
+		}
+		function bt1(){
+			cu1.style.display="block";
+			cu1.style.height=600+"px";
+         	x=event.clientX;
+			y=event.clientY;
+			tex.innerHTML="Estas adentro, "+x+" "+y;
+			tex.style.display="block";
+
+			z=0;
+			ho=setTimeout(bt1,400)
+			z=z+1;
+			if(z==4){
+				clearInterval(ho);
+				cu1.style.display="none";
+					cu1.style.height=0+"px";
+		}
+	}
+	function bt2(){
+		cu2.style.display="block";
+    cu2.style.width=1000+"px";
+    lt.style.display="block";
+
+			hi=setTimeout(bt2,1000)
+			x=x+1;
+			if(x==10){
+				clearInterval(hi);
+				cu2.style.display="none";
+					lt.style.display="none";
+		
+	}
+}
+</script>
+</body>
+</html>
